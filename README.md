@@ -14,7 +14,8 @@
 ## ⚡ Skills
 - 🐍 Python (Basic)
 - 🌐 HTML & CSS
-- 🗣️ Communication
+- 🧠 Problem Solving
+- 
 
 ---
 
