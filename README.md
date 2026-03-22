@@ -15,7 +15,6 @@
 - 🐍 Python (Basic)
 - 🌐 HTML & CSS
 - 🧠 Problem Solving
-- 
 
 ---
 
