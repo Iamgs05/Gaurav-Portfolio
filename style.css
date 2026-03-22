@@ -1,52 +1,49 @@
 body {
     margin: 0;
-    font-family: monospace;
-    background: black;
-    color: #0f0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow-x: hidden;
 }
 
-canvas {
+/* 3D BACKGROUND */
+#particles-js {
     position: fixed;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f2027;
     z-index: -1;
 }
 
+/* MAIN */
 .container {
     text-align: center;
+    padding: 40px 20px;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* GLASS CARD */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding: 20px;
-}
-
-.glow {
-    font-size: 35px;
-    text-shadow: 0 0 10px #0f0;
-}
-
-.terminal {
+    margin: 15px auto;
     width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    background: black;
-    border: 1px solid #0f0;
-    padding: 15px;
-    height: 300px;
-    overflow-y: auto;
-    text-align: left;
+    max-width: 400px;
+    transition: 0.3s;
 }
 
-input {
-    width: 70%;
-    padding: 10px;
-    background: black;
-    border: 1px solid #0f0;
-    color: #0f0;
-}
-
-button {
-    padding: 10px;
-    background: #0f0;
-    border: none;
-    color: black;
-    margin-left: 5px;
-    cursor: pointer;
+/* HOVER EFFECT */
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
 }
