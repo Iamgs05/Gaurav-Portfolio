@@ -3,10 +3,9 @@ body {
     font-family: monospace;
     background: black;
     color: #00ffcc;
-    overflow-x: hidden;
 }
 
-/* Background animation */
+/* Background */
 .bg {
     position: fixed;
     width: 100%;
@@ -21,22 +20,22 @@ body {
     padding: 30px;
 }
 
-/* Glow text */
+/* Glow name */
 .glow {
     font-size: 40px;
-    color: #00ffcc;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 
-/* Tag */
-.tag {
+/* Typing effect */
+.typing {
     color: #00ffaa;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    font-size: 16px;
 }
 
 /* Cards */
 .card {
-    background: rgba(0, 255, 204, 0.05);
+    background: rgba(0,255,204,0.05);
     border: 1px solid #00ffcc;
     padding: 20px;
     margin: 20px auto;
@@ -47,10 +46,26 @@ body {
     transition: 0.3s;
 }
 
-/* Hover 3D effect */
 .card:hover {
     transform: scale(1.05) rotateX(5deg);
     box-shadow: 0 0 25px #00ffcc;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: black;
+    background: #00ffcc;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00ffaa;
 }
 
 /* List */
