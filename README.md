@@ -15,7 +15,10 @@
 - 🐍 Python (Basic)
 - 🌐 HTML & CSS
 - 🧠 Problem Solving
+## 📡 OSINT Bot
+Interested in OSINT tools and automation  
 
+📩 Contact: Telegram - @founder001
 ---
 
 ## 🚀 Projects
