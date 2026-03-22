@@ -12,11 +12,11 @@
 
 <div class="container">
     <h1 class="glow">Gaurav Patel</h1>
-    <p class="tag">> Aspiring BBA Student | AI Enthusiast</p>
+    <p class="typing"></p>
 
     <div class="card">
         <h2>💻 About Me</h2>
-        <p>I am passionate about AI, business and technology. Building my future step by step.</p>
+        <p>Passionate about AI, business and technology. Building my future step by step.</p>
     </div>
 
     <div class="card">
@@ -25,6 +25,7 @@
             <li>Python (Basic)</li>
             <li>HTML & CSS</li>
             <li>Problem Solving</li>
+            <li>AI Learning</li>
         </ul>
     </div>
 
@@ -35,7 +36,32 @@
             <li>AI Projects (Coming Soon)</li>
         </ul>
     </div>
+
+    <div class="card">
+        <h2>📡 OSINT Bot</h2>
+        <p>Exploring OSINT tools & automation</p>
+        <a href="https://t.me/founder001" target="_blank" class="btn">Contact on Telegram</a>
+    </div>
+
+    <div class="card">
+        <h2>🔗 Connect</h2>
+        <a href="https://www.linkedin.com/in/gaurav-patel-56437a3b9" target="_blank" class="btn">LinkedIn</a>
+    </div>
+
 </div>
+
+<script>
+const text = "Aspiring BBA Student | AI Enthusiast | Future Entrepreneur";
+let i = 0;
+function typing() {
+    if (i < text.length) {
+        document.querySelector(".typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 40);
+    }
+}
+typing();
+</script>
 
 </body>
 </html>
