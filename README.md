@@ -26,7 +26,7 @@
 ---
 
 ## 🌐 Live Website
-👉 https://lamgs05.github.io/Gaurav-Portfolio/
+👉 https://iamgs05.github.io/Gaurav-Portfolio/
 
 ---
 
