@@ -5,110 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gaurav Patel</title>
 <link rel="stylesheet" href="style.css">
+
+<!-- 3D LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
+
 <body>
 
-<canvas id="matrix"></canvas>
+<!-- 3D Background -->
+<div id="particles-js"></div>
 
 <div class="container">
-    <h1 class="glow">Gaurav Patel</h1>
 
-    <div class="terminal" id="terminal">
-        <p>> System Booting...</p>
+    <h1 class="title">Gaurav Patel</h1>
+    <p class="subtitle">Aspiring BBA Student | AI Enthusiast</p>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I am passionate about Artificial Intelligence and Business. I am currently preparing for BBA and building projects.</p>
     </div>
 
-    <input type="text" id="input" placeholder="Type command...">
-    <button onclick="startVoice()">🎤 Voice</button>
+    <div class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>HTML & CSS</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Projects</h2>
+        <ul>
+            <li>Portfolio Website</li>
+            <li>AI Projects (Coming Soon)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Telegram: @founder001</p>
+    </div>
+
 </div>
 
 <script>
-// MATRIX EFFECT
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-let letters = "01".split("");
-let fontSize = 14;
-let columns = canvas.width / fontSize;
-let drops = Array(columns).fill(1);
-
-function draw() {
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#0f0";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-        let text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
-            drops[i] = 0;
-
-        drops[i]++;
-    }
-}
-setInterval(draw, 33);
-
-// TERMINAL
-const input = document.getElementById("input");
-const terminal = document.getElementById("terminal");
-
-function print(text) {
-    terminal.innerHTML += "<p>> " + text + "</p>";
-    terminal.scrollTop = terminal.scrollHeight;
-}
-
-input.addEventListener("keydown", function(e) {
-    if (e.key === "Enter") {
-        let cmd = input.value.toLowerCase();
-        print(cmd);
-
-        if (cmd === "help") {
-            print("Commands: about, skills, contact, hack");
-        }
-        else if (cmd === "about") {
-            print("Gaurav | AI Learner | Future Entrepreneur");
-        }
-        else if (cmd === "skills") {
-            print("Python, HTML, Problem Solving");
-        }
-        else if (cmd === "contact") {
-            print("Telegram: @founder001");
-        }
-        else if (cmd === "hack") {
-            fakeHack();
-        }
-        else {
-            print("Access Denied ⚠️");
-        }
-
-        input.value = "";
-    }
+// PARTICLES CONFIG
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80 },
+    "size": { "value": 3 },
+    "move": { "speed": 2 },
+    "line_linked": { "enable": true }
+  }
 });
-
-// FAKE HACK ANIMATION
-function fakeHack() {
-    print("Initializing hack...");
-    setTimeout(() => print("Bypassing firewall..."), 1000);
-    setTimeout(() => print("Accessing secure server..."), 2000);
-    setTimeout(() => print("Access Granted ✅"), 3000);
-}
-
-// VOICE COMMAND
-function startVoice() {
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-    recognition.start();
-
-    recognition.onresult = function(event) {
-        let voiceText = event.results[0][0].transcript.toLowerCase();
-        input.value = voiceText;
-        input.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter" }));
-    };
-}
 </script>
 
 </body>
-</html>
+</html>}
